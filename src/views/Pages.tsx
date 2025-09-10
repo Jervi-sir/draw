@@ -13,9 +13,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Trash2 } from "lucide-react";
+import { Github, Trash2 } from "lucide-react";
 import TitleBar from "@/components/TitleBar";
 import { getLocalUser } from "@/db/auth";
+import ProfileDropdown from "@/components/ProfileDropdown";
+import { Link } from "@tanstack/react-router";
 
 function NewPageOptionDropdown({
   createPageFn,
@@ -27,7 +29,7 @@ function NewPageOptionDropdown({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="font-semibold">
+        <Button variant="outline" className="font-semibold rounded-full">
           + New Page
         </Button>
       </DropdownMenuTrigger>
@@ -109,14 +111,17 @@ export default function Pages() {
   }
 
   return (
-    <div className="mx-2 my-3 h-full w-full">
+    <div className="mx-2 py-3 h-full w-full flex flex-col">
       <TitleBar
         title="PAGES"
         extra={
-          <NewPageOptionDropdown
-            createPageFn={createPage}
-            createMermaidPageFn={createMermaidPage}
-          />
+          <>
+            <NewPageOptionDropdown
+              createPageFn={createPage}
+              createMermaidPageFn={createMermaidPage}
+            />
+            <ProfileDropdown />
+          </>
         }
       />
       <div className="flex flex-wrap gap-3 py-1">
@@ -149,6 +154,15 @@ export default function Pages() {
         ) : (
           <NoData name="Pages" />
         )}
+      </div>
+      <div className="flex justify-center gap-4 mt-auto">
+        <p className="font-virgil">not my work, this magic was made by</p>
+        <div className="border rounded-full p-1">
+          <Github size={18} />
+        </div>
+        <a href="https://github.com/macintushar/draw" target="_blank" className="font-mono">
+          macintushar/draw
+        </a>
       </div>
     </div>
   );

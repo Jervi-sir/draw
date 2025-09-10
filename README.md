@@ -1,3 +1,8 @@
+### Forked from 
+
+- [macintushar/draw](https://github.com/macintushar/draw)
+- I have disabled Register screen
+
 [![Draw Logo](https://raw.githubusercontent.com/macintushar/draw/main/public/draw-logo.png)]()
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
