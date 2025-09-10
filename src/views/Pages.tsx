@@ -17,7 +17,6 @@ import { Github, Trash2 } from "lucide-react";
 import TitleBar from "@/components/TitleBar";
 import { getLocalUser } from "@/db/auth";
 import ProfileDropdown from "@/components/ProfileDropdown";
-import { Link } from "@tanstack/react-router";
 
 function NewPageOptionDropdown({
   createPageFn,

@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import ProfileDropdown from "./ProfileDropdown";
 import { Link } from "@tanstack/react-router";
 
 type TitleBarProps = {
