@@ -2,6 +2,7 @@
 
 - [macintushar/draw](https://github.com/macintushar/draw)
 - I have disabled Register screen
+- supabase is from gacempron
 
 [![Draw Logo](https://raw.githubusercontent.com/macintushar/draw/main/public/draw-logo.png)]()
 
